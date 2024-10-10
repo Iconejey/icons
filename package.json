@@ -1,0 +1,20 @@
+{
+	"name": "icons",
+	"version": "1.0.0",
+	"description": "",
+	"main": "server.js",
+	"scripts": {
+		"start": "node server.js",
+		"prod": "pm2 start server.js --name icons",
+		"dev": "nodemon server.js",
+		"kill": "fuser 8013/tcp -k"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"canvas": "3.0.0-rc2",
+		"express": "^4.21.1",
+		"nodemon": "^3.1.7"
+	}
+}
