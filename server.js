@@ -11,8 +11,6 @@ app.get('/:shape/:code/:bg/:fg/:width/:height', (req, res) => {
 	const w = parseInt(width);
 	const h = parseInt(height);
 
-	console.log(shape, code, bg, fg, w, h);
-
 	// Create canvas
 	const canvas = createCanvas(w, h);
 	const ctx = canvas.getContext('2d');
@@ -35,7 +33,7 @@ app.get('/:shape/:code/:bg/:fg/:width/:height', (req, res) => {
 
 	// Set font to Material Icons centered with color
 	let font_size = h !== w ? 300 : h * 0.6;
-	if (shape === 'circle') font_size /= 0.8;
+	if (shape === 'circle') font_size /= 0.9;
 	if (shape === 'badge') font_size = h;
 
 	font_size = Math.floor(font_size);
